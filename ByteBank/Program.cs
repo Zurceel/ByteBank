@@ -32,7 +32,7 @@ ContaCorrente conta2 = new ContaCorrente
 //Console.WriteLine("Saldo: " + conta2.saldo);
 
 Console.WriteLine("Valor antes de sacar " + conta2.saldo);
-conta2.Sacar(-50);
+conta2.Depositar(100);
 Console.WriteLine("Valor depois do saque " + conta2.saldo);
 
 Console.ReadKey();

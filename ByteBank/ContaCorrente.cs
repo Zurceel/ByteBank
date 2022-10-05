@@ -24,5 +24,10 @@
 				return true;
 			}
 		}
+
+		public void Depositar(double valor)
+		{
+			saldo = saldo + valor;
+		}
 	}
 }

@@ -10,24 +10,34 @@
 
 		public bool Sacar (double valor)
 		{
-			if(saldo < valor)
+			if(valor <= this.saldo)
 			{
-				return false;
-			}
-			if (valor < 0)
-			{
-				return false;
+				this.saldo -= valor;
+				return true;
 			}
 			else
 			{
-				saldo = saldo - valor;
-				return true;
+				return false;
 			}
 		}
 
 		public void Depositar(double valor)
 		{
-			saldo = saldo + valor;
+			this.saldo += valor;
+		}
+
+		public bool Transferir(double valor, ContaCorrente destino)
+		{
+			if (this.saldo < valor)
+			{
+				return false;
+			}
+			else
+			{
+				this.Sacar(valor);
+				destino.Depositar(valor);
+				return true;
+			}
 		}
 	}
 }

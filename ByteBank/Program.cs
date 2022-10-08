@@ -31,9 +31,13 @@ ContaCorrente conta2 = new ContaCorrente
 //Console.WriteLine("Nome da Agência: " + conta2.nomeAgencia);
 //Console.WriteLine("Saldo: " + conta2.saldo);
 
-Console.WriteLine("Valor antes de sacar " + conta2.saldo);
-conta2.Depositar(100);
-Console.WriteLine("Valor depois do saque " + conta2.saldo);
+Console.WriteLine("Valor na conta do Geovanna " + conta2.saldo);
+Console.WriteLine("Valor na conta da Gabriel " + conta1.saldo);
+
+conta1.Transferir(200, conta2);
+Console.WriteLine("Valor na conta do Geovanna " + conta2.saldo);
+Console.WriteLine("Valor na conta da Gabriel " + conta1.saldo);
+
 
 Console.ReadKey();
 
